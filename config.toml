@@ -1,0 +1,95 @@
+baseURL = "https://byteabits.github.io"
+title = "GDM La Merced Corella"
+author = "usarral"
+languageCode = "es"
+DefaultContentLanguage = "es"
+enableInlineShortcodes = true
+theme = "Blonde"
+enableRobotsTXT = true
+enableEmoji = true
+
+
+googleAnalytics = "G-N9NRVJRPPS"
+
+#disqusShortname = ""
+
+[params]
+paginator_pages = "5"
+
+archive_dropdown = "true"
+
+tagsLimit = 20
+
+  [params.post]
+    thumbnail_height = "h-48"
+
+    thumbnail_width = "w-auto"
+
+  [params.widgets]
+    archives = true
+    categories = true
+    tags = true
+    recentposts = false
+    search = false
+
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Inicio"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "Sobre el Club"
+    url = "/about/"
+    weight = 2
+
+    [[menu.main]]
+    identifier = "lives"
+    name = "Directos"
+    url = "/lives/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "Contacto"
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+archive = "archives"
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
+
+[build]
+  writeStats = true

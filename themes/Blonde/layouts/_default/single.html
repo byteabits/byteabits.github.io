@@ -1,0 +1,25 @@
+{{ define "header_css" }}{{ end }}
+
+{{ define "main" }}
+<div class="grid grid-cols-3 gap-4">
+    <div class="bg-white col-span-3 lg:col-span-2 p-5">
+        <h1 class="title text-4xl">{{.Title}}</h1>
+        <div class="content py-1">{{.Content}}</div>
+        {{- range .Params.authors }}
+  {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+    <figure>
+      <img src="{{ .Params.photo }}" alt=""/>
+      <figcaption>
+        <a href="{{ .Permalink }}">{{ .Params.name }}</a>
+      </figcaption>
+    </figure>
+  {{ end }}
+{{ end }}
+    </div>
+    <div class="hidden lg:block lg:col-span-1">
+        {{ partial "widgets/twitch.html" . }}
+
+        {{ partial "widgets/events.html" . }}
+    </div>
+</div>
+{{ end }}
